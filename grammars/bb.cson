@@ -1,0 +1,143 @@
+{
+	'scopeName': 'source.bb'
+	'name': 'BB'
+	'fileTypes': [
+		'bb',
+		'inc'
+	]
+	'patterns': [
+		{
+			'include': '#comment'
+		}
+		{
+			'include': '#variable-assignment'
+		}
+		{
+			'include': '#variables'
+		}
+		{
+			'include': '#directives'
+		}
+	]
+	'repository':
+		'string':
+			'begin': '"'
+			'beginCaptures':
+				'0':
+					'name': 'punctuation.definition.string.begin.bb'
+			'end': '"'
+			'endCaptures':
+				'0':
+					'name': 'punctuation.definition.string.end.bb'
+			'name': 'string.quoted.double.bb'
+			'patterns': [
+				{
+					'include': '#variables'
+				}
+			]
+
+		'comment':
+			'begin': '(^[ \\t]+)?(?=#)'
+			'beginCaptures':
+				'1':
+					'name': 'punctuation.whitespace.comment.leading.makefile'
+			'end': '(?!\\G)'
+			'patterns': [
+				{
+					'begin': '#'
+					'beginCaptures':
+						'0':
+							'name': 'punctuation.definition.comment.makefile'
+					'end': '\\n'
+					'name': 'comment.line.number-sign.makefile'
+					'patterns': [
+						{
+							'match': '\\\\\\n'
+							'name': 'constant.character.escape.continuation.makefile'
+						}
+					]
+				}
+			]
+
+		'directives':
+			'patterns': [
+				{
+					'begin': '^[ ]*(include)\\b'
+					'beginCaptures':
+						'1':
+							'name': 'keyword.control.include.bb'
+					'end': '^'
+					'patterns': [
+						{
+							'include': '#comment'
+						}
+					]
+				}
+				{
+					'begin': '^[ ]*(require)\\b'
+					'beginCaptures':
+						'1':
+							'name': 'keyword.control.require.bb'
+					'end': '^'
+					'patterns': [
+						{
+							'include': '#comment'
+						}
+					]
+				}
+				{
+					'begin': '^[ ]*(inherit)\\b'
+					'beginCaptures':
+						'1':
+							'name': 'keyword.control.inherit.bb'
+					'end': '^'
+					'patterns': [
+						{
+							'include': '#comment'
+						}
+					]
+				}
+			]
+
+		'variable-assignment':
+			'begin': '(^[ ]*|\\G\\s*)([^\\s]+)\\s*(=|\\?=|:=|\\+=)'
+			'beginCaptures':
+				'2':
+					'name': 'variable.other.bb'
+				'3':
+					'name': 'punctuation.separator.key-value.bb'
+			'end': '\\n'
+			'patterns': [
+				{
+					'match': '\\\\\\n'
+					'name': 'constant.character.escape.continuation.bb'
+				}
+				{
+					'include': '#comment'
+				}
+				{
+					'include': '#variables'
+				}
+				{
+					'include': '#string'
+				}
+			]
+
+		'variables':
+			'patterns': [
+				{
+					'captures':
+						'1':
+							'name': 'punctuation.definition.variable.bb'
+					'match': '(\\$)([a-zA-Z0-9_])*\\b'
+					'name': 'variable.language.bb'
+				}
+				{
+					'captures':
+						'1':
+							'name': 'punctuation.definition.variable.bb'
+					'match': '(\\$\\{)(?:[a-zA-Z0-9_])*(\\})'
+					'name': 'variable.language.bb'
+				}
+			]
+}
