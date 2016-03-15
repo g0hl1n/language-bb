@@ -1,9 +1,8 @@
 # BitBake recipe language support in Atom
 
-Add syntax highlighting for OpenEmbedded/Bitbake recipes in Atom.
-Atom syntax highlighting for OpenEmbedded/Bitbake recipes.
+Adds syntax highlighting to OpenEmbedded/Bitbake recipes in Atom.
 
-Based on snippets from [language-make](https://github.com/atom/language-make) and [language-perl](https://github.com/atom/language-perl).
+Based on [language-make](https://github.com/atom/language-make) and [language-perl](https://github.com/atom/language-perl).
 
 ## Features
 Following features are already implemented:
