@@ -40,20 +40,20 @@
 			'begin': '(^[ \\t]+)?(?=#)'
 			'beginCaptures':
 				'1':
-					'name': 'punctuation.whitespace.comment.leading.makefile'
+					'name': 'punctuation.whitespace.comment.leading.bb'
 			'end': '(?!\\G)'
 			'patterns': [
 				{
 					'begin': '#'
 					'beginCaptures':
 						'0':
-							'name': 'punctuation.definition.comment.makefile'
+							'name': 'punctuation.definition.comment.bb'
 					'end': '\\n'
-					'name': 'comment.line.number-sign.makefile'
+					'name': 'comment.line.number-sign.bb'
 					'patterns': [
 						{
 							'match': '\\\\\\n'
-							'name': 'constant.character.escape.continuation.makefile'
+							'name': 'constant.character.escape.continuation.bb'
 						}
 					]
 				}
