@@ -100,12 +100,12 @@
 			]
 
 		'variable-assignment':
-			'begin': '(^[ ]*|\\G\\s*)([^\\s]+)\\s*(=|\\?=|:=|\\+=)'
+			'begin': '(^[ ]*|\\G\\s*)([^\\s]+)\\s*(=|\\?=|\\?\\?=|:=|\\+=|=\\+|\\.=|=\\.)\\s*'
 			'beginCaptures':
 				'2':
 					'name': 'variable.other.bb'
 				'3':
-					'name': 'punctuation.separator.key-value.bb'
+					'name': 'keyword.operator.assignment.bb'
 			'end': '\\n'
 			'patterns': [
 				{
