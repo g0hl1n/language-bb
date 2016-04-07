@@ -11,6 +11,7 @@
     "atom": ">=1.0"
   },
   "readmeFilename": "README.md",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rleitner/language-bb/issues"
   }
