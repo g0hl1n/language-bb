@@ -18,6 +18,12 @@
 		{
 			'include': '#directives'
 		}
+		{
+			'include': 'source.python'
+		}
+		{
+			'include': 'source.shell'
+		}
 	]
 	'repository':
 		'string':
@@ -96,6 +102,42 @@
 							'include': '#comment'
 						}
 					]
+				}
+				{
+					'begin': '^[ ]*(fakeroot)?[ ]*(python)[ ]*([a-z_]+)*[ ]*(\\(\\))?[ ]*(\\{)'
+					'beginCaptures':
+						'1':
+							'name': 'keyword.control.fakeroot.bb'
+						'2':
+							'name': 'storage.type.function.python.bb'
+						'3':
+							'name': 'entity.name.function.python.bb'
+						'5':
+							'name': 'punctuation.definition.python-function.bb'
+					'end': '(\\})'
+					'endCaptures':
+						'1':
+							'name': 'punctuation.definition.python-function.bb'
+					'patterns': [
+						'include': 'source.python'
+						]
+				}
+				{
+					'begin': '^[ ]*(fakeroot)?[ ]*([a-z_]+)[ ]*(\\(\\))?[ ]*(\\{)'
+					'beginCaptures':
+						'1':
+							'name': 'keyword.control.fakeroot.bb'
+						'2':
+							'name': 'entity.name.function.shell.bb'
+						'4':
+							'name': 'punctuation.definition.shell-function.bb'
+					'end': '(\\})'
+					'endCaptures':
+						'1':
+							'name': 'punctuation.definition.shell-function.bb'
+					'patterns': [
+						'include': 'source.shell'
+						]
 				}
 			]
 
