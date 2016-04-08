@@ -1,4 +1,5 @@
 '.source.bb':
 	'editor':
-		'increaseIndentPattern': '^[^\\t ]+:'
+		'increaseIndentPattern': '^.*\\{\\}?\\s*$'
+		'decreaseIndentPattern': '^\\s*\\}'
 		'commentStart': '# '
