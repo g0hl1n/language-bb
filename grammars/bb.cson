@@ -3,6 +3,7 @@
 	'name': 'BB'
 	'fileTypes': [
 		'bb',
+		'bbclass',
 		'inc'
 	]
 	'patterns': [
@@ -17,6 +18,12 @@
 		}
 		{
 			'include': '#directives'
+		}
+		{
+			'include': 'source.python'
+		}
+		{
+			'include': 'source.shell'
 		}
 	]
 	'repository':
@@ -40,20 +47,20 @@
 			'begin': '(^[ \\t]+)?(?=#)'
 			'beginCaptures':
 				'1':
-					'name': 'punctuation.whitespace.comment.leading.makefile'
+					'name': 'punctuation.whitespace.comment.leading.bb'
 			'end': '(?!\\G)'
 			'patterns': [
 				{
 					'begin': '#'
 					'beginCaptures':
 						'0':
-							'name': 'punctuation.definition.comment.makefile'
+							'name': 'punctuation.definition.comment.bb'
 					'end': '\\n'
-					'name': 'comment.line.number-sign.makefile'
+					'name': 'comment.line.number-sign.bb'
 					'patterns': [
 						{
 							'match': '\\\\\\n'
-							'name': 'constant.character.escape.continuation.makefile'
+							'name': 'constant.character.escape.continuation.bb'
 						}
 					]
 				}
@@ -97,15 +104,51 @@
 						}
 					]
 				}
+				{
+					'begin': '^[ ]*(fakeroot)?[ ]*(python)[ ]*([a-z_]+)*[ ]*(\\(\\))?[ ]*(\\{)'
+					'beginCaptures':
+						'1':
+							'name': 'keyword.control.fakeroot.bb'
+						'2':
+							'name': 'storage.type.function.python.bb'
+						'3':
+							'name': 'entity.name.function.python.bb'
+						'5':
+							'name': 'punctuation.definition.python-function.bb'
+					'end': '(\\})'
+					'endCaptures':
+						'1':
+							'name': 'punctuation.definition.python-function.bb'
+					'patterns': [
+						'include': 'source.python'
+						]
+				}
+				{
+					'begin': '^[ ]*(fakeroot)?[ ]*([a-z_]+)[ ]*(\\(\\))?[ ]*(\\{)'
+					'beginCaptures':
+						'1':
+							'name': 'keyword.control.fakeroot.bb'
+						'2':
+							'name': 'entity.name.function.shell.bb'
+						'4':
+							'name': 'punctuation.definition.shell-function.bb'
+					'end': '(\\})'
+					'endCaptures':
+						'1':
+							'name': 'punctuation.definition.shell-function.bb'
+					'patterns': [
+						'include': 'source.shell'
+						]
+				}
 			]
 
 		'variable-assignment':
-			'begin': '(^[ ]*|\\G\\s*)([^\\s]+)\\s*(=|\\?=|:=|\\+=)'
+			'begin': '(^[ ]*|\\G\\s*)([^\\s]+)\\s*(=|\\?=|\\?\\?=|:=|\\+=|=\\+|\\.=|=\\.)\\s*'
 			'beginCaptures':
 				'2':
 					'name': 'variable.other.bb'
 				'3':
-					'name': 'punctuation.separator.key-value.bb'
+					'name': 'keyword.operator.assignment.bb'
 			'end': '\\n'
 			'patterns': [
 				{
