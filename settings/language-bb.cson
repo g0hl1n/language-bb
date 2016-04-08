@@ -2,4 +2,3 @@
 	'editor':
 		'increaseIndentPattern': '^[^\\t ]+:'
 		'commentStart': '# '
-		'tabType': 'hard'
