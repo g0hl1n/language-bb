@@ -9,11 +9,11 @@ Following features are already implemented:
  * Comments
  * Variable assignments
  * Variables
-
-## TODO
-Following things are still to be done:
  * Function definitions
- * Syntax inside functions
+ * Syntax (python & shell) inside functions
+
+## Bugs
+Please report bugs or feature requests using [GitHub Issues](https://github.com/rleitner/language-bb/issues)
 
 ## Contributing
 
