@@ -3,6 +3,7 @@
 	'name': 'BB'
 	'fileTypes': [
 		'bb',
+		'bbappend',
 		'bbclass',
 		'inc'
 	]
