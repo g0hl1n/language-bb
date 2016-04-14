@@ -1,7 +1,7 @@
 {
   "name": "language-bb",
   "author": "Richard Leitner <richard.leitner@skidata.com>",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "OpenEmbedded/Bitbake recipes language support in Atom",
   "repository": {
     "type": "git",
