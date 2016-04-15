@@ -29,18 +29,33 @@
 	]
 	'repository':
 		'string':
-			'begin': '"'
-			'beginCaptures':
-				'0':
-					'name': 'punctuation.definition.string.begin.bb'
-			'end': '"'
-			'endCaptures':
-				'0':
-					'name': 'punctuation.definition.string.end.bb'
-			'name': 'string.quoted.double.bb'
 			'patterns': [
 				{
-					'include': '#variables'
+					'begin': '"'
+					'beginCaptures':
+						'0':
+							'name': 'punctuation.definition.string.begin.bb'
+					'end': '"'
+					'endCaptures':
+						'0':
+							'name': 'punctuation.definition.string.end.bb'
+					'name': 'string.quoted.double.bb'
+					'patterns': [
+						{
+							'include': '#variables'
+						}
+					]
+				}
+				{
+					'begin': '\''
+					'beginCaptures':
+						'0':
+							'name': 'punctuation.definition.string.begin.bb'
+					'end': '\''
+					'endCaptures':
+						'0':
+							'name': 'punctuation.definition.string.end.bb'
+					'name': 'string.quoted.single.bb'
 				}
 			]
 
