@@ -1,7 +1,7 @@
 ## language-bb changelog
 
 * **0.2.2**:
-	* fix python function syntax highlighting bug (issue #3)
+	* fix python function syntax highlighting bug (issue #3) (two times)
 	* add support for single-quoted strings
 * **0.2.1**: Apr 14, 2016
 	* add .bbappend to file types

@@ -150,10 +150,7 @@
 							'name': 'entity.name.function.python.bb'
 						'5':
 							'name': 'punctuation.definition.python-function.bb'
-					'end': '(^[^ \\t])'
-					'endCaptures':
-						'1':
-							'name': 'punctuation.definition.python-function.bb'
+					'end': '(?=^\\S)'
 					'patterns': [
 						'include': 'source.python'
 						]
