@@ -106,7 +106,7 @@
 					]
 				}
 				{
-					'begin': '^[ ]*(fakeroot)?[ ]*(python)[ ]*([a-z_]+)*[ ]*(\\(\\))?[ ]*(\\{)'
+					'begin': '^[ ]*(fakeroot)?[ ]*(python)[ ]*([a-z_]+)*[ ]*(\\([a-zA-Z_\\,\\ ]*\\))?[ ]*(\\{)'
 					'beginCaptures':
 						'1':
 							'name': 'keyword.control.fakeroot.bb'
@@ -117,6 +117,25 @@
 						'5':
 							'name': 'punctuation.definition.python-function.bb'
 					'end': '(\\})'
+					'endCaptures':
+						'1':
+							'name': 'punctuation.definition.python-function.bb'
+					'patterns': [
+						'include': 'source.python'
+						]
+				}
+				{
+					'begin': '^[ ]*(fakeroot)?[ ]*(def)[ ]*([a-z_]+)*[ ]*(\\([a-zA-Z_\\,\\ ]*\\))?[ ]*(\\:)'
+					'beginCaptures':
+						'1':
+							'name': 'keyword.control.fakeroot.bb'
+						'2':
+							'name': 'storage.type.function.python.bb'
+						'3':
+							'name': 'entity.name.function.python.bb'
+						'5':
+							'name': 'punctuation.definition.python-function.bb'
+					'end': '(^[^ \\t])'
 					'endCaptures':
 						'1':
 							'name': 'punctuation.definition.python-function.bb'
