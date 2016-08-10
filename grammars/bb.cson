@@ -60,7 +60,7 @@
 			]
 
 		'comment':
-			'begin': '(^[ \\t]+)?(?=#)'
+			'begin': '(^\\s+)?(?=#)'
 			'beginCaptures':
 				'1':
 					'name': 'punctuation.whitespace.comment.leading.bb'
@@ -85,7 +85,7 @@
 		'directives':
 			'patterns': [
 				{
-					'begin': '^[ ]*(include)\\b'
+					'begin': '^\\s*(include)\\b'
 					'beginCaptures':
 						'1':
 							'name': 'keyword.control.include.bb'
@@ -97,7 +97,7 @@
 					]
 				}
 				{
-					'begin': '^[ ]*(require)\\b'
+					'begin': '^\\s*(require)\\b'
 					'beginCaptures':
 						'1':
 							'name': 'keyword.control.require.bb'
@@ -109,7 +109,7 @@
 					]
 				}
 				{
-					'begin': '^[ ]*(inherit)\\b'
+					'begin': '^\\s*(inherit)\\b'
 					'beginCaptures':
 						'1':
 							'name': 'keyword.control.inherit.bb'
@@ -121,7 +121,7 @@
 					]
 				}
 				{
-					'begin': '^[ ]*(fakeroot)?[ ]*(python)[ ]*([a-z_]+)*[ ]*(\\([a-zA-Z_\\,\\ ]*\\))?[ ]*(\\{)'
+					'begin': '^\\s*(fakeroot)?\\s*(python)\\s*([a-zA-Z0-9-_]+)*\\s*(\\([a-zA-Z_\\,\\ ]*\\))?\\s*(\\{)'
 					'beginCaptures':
 						'1':
 							'name': 'keyword.control.fakeroot.bb'
@@ -140,7 +140,7 @@
 						]
 				}
 				{
-					'begin': '^[ ]*(fakeroot)?[ ]*(def)[ ]*([a-z_]+)*[ ]*(\\([a-zA-Z_\\,\\ ]*\\))?[ ]*(\\:)'
+					'begin': '^\\s*(fakeroot)?\\s*(def)\\s*([a-zA-Z0-9-_]+)*\\s*(\\([a-zA-Z_\\,\\ ]*\\))?\\s*(\\:)'
 					'beginCaptures':
 						'1':
 							'name': 'keyword.control.fakeroot.bb'
@@ -156,7 +156,7 @@
 						]
 				}
 				{
-					'begin': '^[ ]*(fakeroot)?[ ]*([a-z_]+)[ ]*(\\(\\))?[ ]*(\\{)'
+					'begin': '^\\s*(fakeroot)?\\s*([a-zA-Z0-9-_]+)\\s*(\\(\\))?\\s*(\\{)'
 					'beginCaptures':
 						'1':
 							'name': 'keyword.control.fakeroot.bb'
@@ -175,7 +175,7 @@
 			]
 
 		'variable-assignment':
-			'begin': '(^[ ]*|\\G\\s*)([^\\s]+)\\s*(=|\\?=|\\?\\?=|:=|\\+=|=\\+|\\.=|=\\.)\\s*'
+			'begin': '(^\\s*|\\G\\s*)([^\\s]+)\\s*(=|\\?=|\\?\\?=|:=|\\+=|=\\+|\\.=|=\\.)\\s*'
 			'beginCaptures':
 				'2':
 					'name': 'variable.other.bb'
