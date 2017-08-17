@@ -2,5 +2,5 @@
 
 Contributors in the order of first contribution:
 
-* Richard Leitner ([rleitner](https://github.com/rleitner))
+* Richard Leitner ([g0hl1n](https://github.com/g0hl1n))
 * Joshua G Lock ([incandescant](https://github.com/incandescant))

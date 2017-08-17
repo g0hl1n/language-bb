@@ -13,7 +13,7 @@ Following code types are being highlighted:
  * Syntax (python & shell) inside functions
 
 ## Bugs
-Please report bugs or feature requests using [GitHub Issues](https://github.com/rleitner/language-bb/issues)
+Please report bugs or feature requests using [GitHub Issues](https://github.com/g0hl1n/language-bb/issues)
 
 ## Contributing
 

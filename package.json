@@ -5,7 +5,7 @@
   "description": "OpenEmbedded/Bitbake recipes language support in Atom",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rleitner/language-bb.git"
+    "url": "https://github.com/g0hl1n/language-bb.git"
   },
   "engines": {
     "atom": ">=1.0"
@@ -13,6 +13,6 @@
   "readmeFilename": "README.md",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rleitner/language-bb/issues"
+    "url": "https://github.com/g0hl1n/language-bb/issues"
   }
 }

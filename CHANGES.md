@@ -1,5 +1,7 @@
 ## language-bb changelog
 
+* **0.2.4**:
+	* transfer ownership to my main github account (g0hl1n)
 * **0.2.3**: Aug 10, 2016
 	* improve regex matches for function names and whitespaces (issue #4)
 * **0.2.2**: Apr 20, 2016
