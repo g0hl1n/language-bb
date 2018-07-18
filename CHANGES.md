@@ -1,5 +1,7 @@
 ## language-bb changelog
 
+* **0.2.5**:
+	* fix variable assignment highlighting (issue #7)
 * **0.2.4**: Aug 17, 2017
 	* transfer ownership to my main github account (g0hl1n)
 * **0.2.3**: Aug 10, 2016
